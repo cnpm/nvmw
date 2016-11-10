@@ -41,7 +41,7 @@ if (binType === 'iojs') {
     downloadNpmZip(npmVersion);
   });
 } else {
-  var pkgUri = util.format(NPM_PKG_JSON_URL, 'joyent/node',
+  var pkgUri = util.format(NPM_PKG_JSON_URL, 'nodejs/node',
     binVersion === 'latest' ? 'master' : binVersion);
   wget(pkgUri, function (filename, pkg) {
     if (filename === null) {
